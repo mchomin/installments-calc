@@ -1,5 +1,5 @@
 # installments-calc
-This is solving non-trival problem of calculating equal repayments for daily accrued simple or compound interest. The problem is non-trival because of different duration periods between the repayments and requires solving exponential equation.
+This is solving non-trival problem of calculating equal repayment for daily accrued simple or compound interest. The problem is non-trival because of different duration periods between the repayments and requires solving exponential equation.
 
 ## Parameters
 * capital - represents the initial lended capital
