@@ -14,8 +14,12 @@ namespace InstallmentCalculator
                 throw new ArgumentException("Repayments should only have the date part.", "repaymentDates");
             if (capital <= 0)
                 throw new ArgumentException("Capital must be greater than 0.", "capital");
-            if (dailyInterest <= 0)
-                throw new ArgumentException("Daily interest must be greater than 0.", "dailyInterest");
+            if (dailyInterest < 0)
+                throw new ArgumentException("Daily interest must be positive or zero.", "dailyInterest");
+            if (dailyInterest == 0)
+                return capital / repaymentDates.Count();
+
+            repaymentDates = repaymentDates.OrderBy(x => x.Date).ToList();
 
             var periodicInterests = new List<double>();
 
