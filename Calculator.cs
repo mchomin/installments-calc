@@ -6,7 +6,7 @@ namespace InstallmentCalculator
 {
     public static class Calculator
     {
-        public static double Calculate(double capital, double dailyInterest, List<DateTime> repaymentDates, bool isDailyCompound)
+        public static double Calculate(double capital, double dailyInterest, IEnumerable<DateTime> repaymentDates, bool isDailyCompound)
         {
             if (repaymentDates.Count < 2)
                 throw new ArgumentException("At least 2 repaymet dates needed.", "repaymentDates");
